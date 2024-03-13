@@ -1,0 +1,13 @@
+/* Both active and focused will use these */
+.input:active + .label,
+.input:focus + .label,
+/* hvis valuen i feltet ikke har noget stående i sig, skal transitionen køre og forblive */
+.input:not([value=""]) + .label   {
+    top: -1.5em;
+    color: white;
+    font-size: .85em
+}
+
+.label {
+     transition: all 500ms ease;
+}
