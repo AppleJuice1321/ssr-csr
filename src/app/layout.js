@@ -1,5 +1,7 @@
 import Link from "next/link";
 import "./globals.css";
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export const metadata = {
   title: "Create Next App",
@@ -17,7 +19,15 @@ export default function RootLayout({ children }) {
           <Link href="users">Users</Link>
           <Link href="login">Log in</Link>
         </nav>
-          {children}</body>
+        {children}
+        {/* Toast message */}
+        {/* Kan også tilføje properties for at ændre lidt på styling og position incl. animation */}
+        <ToastContainer
+          draggable
+          pauseOnHover
+          autoClose={false}
+        />
+      </body>
     </html>
   );
 }
