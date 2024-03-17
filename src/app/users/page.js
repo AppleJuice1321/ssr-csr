@@ -6,7 +6,6 @@ async function getUsers() {
     }
     let data = res.json()
     return data
-
 }
 
 export default async function Users() {
@@ -14,7 +13,7 @@ export default async function Users() {
     const users = await getUsers()
     
     return (
-        <section>
+        <section className="text-white">
             {users.map(user => (
                 <article key={user.id}>
                     <p>{user.name}</p>

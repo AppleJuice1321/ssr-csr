@@ -4,7 +4,7 @@
 import { useState } from "react";
 
 // Props called: Label - kommer udefra
-// props with "" can be overwritten
+// props with "" kan be overwritten
 export default function Input({
   label,
   type,

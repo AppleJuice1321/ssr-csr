@@ -5,7 +5,7 @@
 // server kommunikation bliver overført til den server man fetcher fra
 // Der bliver sent en pre-renderede fil af data
 async function getPosts() {
-  let res = await fetch("https://jsonplaceholder.typicode.com/poasts");
+  let res = await fetch("https://jsonplaceholder.typicode.com/posts");
   let data = await res.json();
   return data;
 }
@@ -28,7 +28,7 @@ export default async function Posts() {
   //   <span>Loading...</span>
   // ) :
   return (
-    <section>
+    <section className="text-white">
       {/* array over api data */}
       {posts.map((post) => (
         <article key={post.id}>

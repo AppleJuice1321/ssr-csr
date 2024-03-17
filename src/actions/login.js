@@ -22,7 +22,7 @@ export async function loginUser(prevState, formData) {
   const username = formData.get("username");
   const password = formData.get("password");
 
-  const validated = userSchema.safeParse({ username, password });
+  const validated = userSchema.safeParse({ username, password, title, author });
 
   // HVIS FORMULAREN IKKE ER UDFYLDT KORREKT - VISE FEJLENE TIL BRUGEREN
   console.log(validated);

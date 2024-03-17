@@ -11,13 +11,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className="bg-black text-white">
         <nav className="bg-orange-500 flex p-4 gap-4 mb-4">
           {/* Casher begge sider og fjerner ubrugelig extra fetching */}
           <Link href="/">Home</Link>
           <Link href="posts">Posts</Link>
           <Link href="users">Users</Link>
           <Link href="login">Log in</Link>
+          <Link href="books">Books</Link>
         </nav>
         {children}
         {/* Toast message */}
